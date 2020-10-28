@@ -37,86 +37,9 @@
           <div class="spacer"></div>
     </section>
 
-    <main class="h-screen">
-        <!--<section class="mt-12 product-detail container mx-auto flex flex-row">
-            <div class="prod-img w-1/2 relative flex items-center justify-center">
-                <div>
-                    <img id="body-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-body-lowres-green.png" alt="" srcset="">
-                    <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-arm-lowres-blue.png" alt="" srcset="">
-                    <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-hem-lowres-red.png" alt="" srcset="">
-                    <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-neck-lowres-red.png" alt="" srcset="">
-                </div>
-            </div>
-            <div class="prod-detail">
-                <div class="px-8">
-                    <h1 class="text-2xl">Join the Jumper!</h1>
-                    <h3>From £95</h3>
-                    <div class="options">
-                        <form action="">
-                            <div class="mb-3">
-                                <label class="mb-1 inline-block" for="">Size:</label>
-                                <div class="size btn_grid">
-                                    <select name="" id="" class="px-2 py-1 border-solid border-2 border-gray-300">
-                                        <option value="2-3">2-3 Years</option>
-                                        <option value="4-5">4-5 Years</option>
-                                        <option value="6-7">6-7 Years</option>
-                                        <option value="8-9">8-9 Years</option>
-                                        <option value="10-11">10-11 Years</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="mb-1 inline-block" for="">Body:</label>
-                                <div class="size btn_grid">
-                                    <select name="" id="body-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="bodyChange()">
-                                        <option class="body" data-name="green" value="green">Green</option>
-                                        <option class="body" data-name="blue" value="blue">Blue</option>
-                                        <option class="body" data-name="Red" value="Red">Red</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="mb-1 inline-block" for="">Arms:</label>
-                                <div class="size btn_grid">
-                                    <select name="" id="arm-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="armChange()">
-                                        <option data-name="green" value="green">Green</option>
-                                        <option data-name="blue" value="blue">Blue</option>
-                                        <option data-name="Red" value="Red">Red</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="mb-1 inline-block" for="">Collar:</label>
-                                <div class="size btn_grid">
-                                    <select name="" id="collar-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="collarChange()">
-                                        <option data-name="green" value="green">Green</option>
-                                        <option data-name="blue" value="blue">Blue</option>
-                                        <option data-name="Red" value="Red">Red</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="mb-1 inline-block" for="">Hem:</label>
-                                <div class="size btn_grid">
-                                    <select name="" id="hem-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="hemChange()">
-                                        <option data-name="green" value="green">Green</option>
-                                        <option data-name="blue" value="blue">Blue</option>
-                                        <option data-name="Red" value="Red">Red</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
+    <main>
         <section class="text-gray-700 body-font overflow-hidden">
-            <div class="container px-5 md:px-0 py-24 mx-auto">
+            <div class="container px-5 py-5 md:px-0 md:py-24 mx-auto">
                 <div class="flex flex-wrap">
                 <div class="prod-img w-1/2 relative flex items-center justify-center">
                     <div>
@@ -130,15 +53,36 @@
                     <h2 class="text-sm title-font text-gray-500 tracking-widest">Convertibles</h2>
                     <h1 class="text-red-700 text-3xl title-font font-medium mb-4">Join The Jumper!</h1>
                     <div class="flex mb-4">
-                        <a class="flex-grow text-red-700 border-b-2 border-red-400 py-2 text-lg px-1">Description</a>
-                        <a class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1 cursor-pointer">Customize</a>
-                        <a class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1 cursor-pointer">Reviews</a>
+                        <a id="defaultOpen" class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1 cursor-pointer menuToggle" onclick="tabOpen(event, 'overview')">Description</a>
+                        <a class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1 cursor-pointer menuToggle" onclick="tabOpen(event, 'customize')">Customize</a>
+                        <a class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1 cursor-pointer menuToggle">Reviews</a>
                     </div>
-                    <div id="overview" class="">
+                    <div id="overview" class="menuTab">
                         <p class="leading-relaxed mb-4">A raglan style modular jumper kit that you build at home using a tactile tool kit; chunky wooden needle, chunky yarn and a guide manual.</p>
                         <div class="flex border-t border-gray-300 py-2">
                             <span class="text-gray-500">Color</span>
-                            <span class="ml-auto text-gray-900">Blue</span>
+                            <div class="ml-auto flex">
+                                <div class="mr-2">
+                                    <div id="collarBox" class="flex p-2 bg-red-700 text-white mb-2">
+                                        <p class="mr-2">Collar:</p>
+                                        <span id="collarTag" class="capitalize">Red</span>
+                                    </div>
+                                    <div id="bodyBox" class="flex p-2 bg-green-700 text-white mb-2">
+                                        <p class="mr-2">Body:</p>
+                                        <span id="bodyTag" class="capitalize">Green</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div id="armBox" class="flex p-2 bg-blue-700 text-white mb-2">
+                                        <p class="mr-2">Arms:</p>
+                                        <span id="armTag" class="capitalize">Blue</span>
+                                    </div>
+                                    <div id="hemBox" class="flex p-2 bg-red-700 text-white mb-2">
+                                        <p class="mr-2">Hem:</p>
+                                        <span id="hemTag" class="capitalize">Red</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="flex border-t border-gray-300 py-2">
                             <span class="text-gray-500">Size</span>
@@ -165,8 +109,11 @@
                             </div>
                         </div>
                         <div class="flex">
+                            <span class="title-font font-medium text-2xl text-gray-900">£95.00</span>
+                            <button class="flex ml-auto text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add To Cart</button>
+                        </div>
                     </div>
-                    <div id="customize" class="hidden">
+                    <div id="customize" class="menuTab">
                         <div class="options">
                             <form action="">
                                 <div class="mb-3">
@@ -186,9 +133,9 @@
                                     <label class="mb-1 inline-block" for="">Body:</label>
                                     <div class="size btn_grid">
                                         <select name="" id="body-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="bodyChange()">
-                                            <option class="body" data-name="green" value="green">Green</option>
+                                            <option class="body" data-name="green" value="green" selected="selected">Green</option>
                                             <option class="body" data-name="blue" value="blue">Blue</option>
-                                            <option class="body" data-name="Red" value="Red">Red</option>
+                                            <option class="body" data-name="red" value="red">Red</option>
                                         </select>
                                     </div>
                                 </div>
@@ -198,8 +145,8 @@
                                     <div class="size btn_grid">
                                         <select name="" id="arm-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="armChange()">
                                             <option data-name="green" value="green">Green</option>
-                                            <option data-name="blue" value="blue">Blue</option>
-                                            <option data-name="Red" value="Red">Red</option>
+                                            <option data-name="blue" value="blue" selected="selected">Blue</option>
+                                            <option data-name="red" value="red">Red</option>
                                         </select>
                                     </div>
                                 </div>
@@ -210,7 +157,7 @@
                                         <select name="" id="collar-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="collarChange()">
                                             <option data-name="green" value="green">Green</option>
                                             <option data-name="blue" value="blue">Blue</option>
-                                            <option data-name="Red" value="Red">Red</option>
+                                            <option data-name="red" value="red" selected="selected">Red</option>
                                         </select>
                                     </div>
                                 </div>
@@ -221,23 +168,54 @@
                                         <select name="" id="hem-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="hemChange()">
                                             <option data-name="green" value="green">Green</option>
                                             <option data-name="blue" value="blue">Blue</option>
-                                            <option data-name="Red" value="Red">Red</option>
+                                            <option data-name="red" value="red" selected="selected">Red</option>
                                         </select>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <div class="flex">
-                        <span class="title-font font-medium text-2xl text-gray-900">£95.00</span>
-                        <button class="flex ml-auto text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add To Cart</button>
-                    </div>
-                </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <script src="scripts/config.js"></script>
+    <!--FOOTER-->
+    <footer class="text-gray-700 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <img class="h-8" src="img/almaborealis-logo.png" alt="">
+          </a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Almaborealis —
+            <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@almaborealis</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a href="https://www.facebook.com/almaborealis/" class="text-gray-500 cursor-pointer">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com/almaborealis?lang=en" class="ml-3 text-gray-500 cursor-pointer">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/almaborealis/?hl=en" class="ml-3 text-gray-500 cursor-pointer">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500 cursor-pointer">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>

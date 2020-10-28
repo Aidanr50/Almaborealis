@@ -1,7 +1,3 @@
-body {
-
-}
-
 html{
     font-family: 'Nunito', sans-serif !important;
     height: -webkit-fill-available;
@@ -39,11 +35,6 @@ html{
     right: 5%;
 }
 
-.img-hov:hover{
-    transform-scale-x: 1.1;
-    transform-scale-y: 1.1;
-}
-
 /* CONFIGURATOR */
 
 .prod-img img{
@@ -59,6 +50,10 @@ html{
 
 select{
     width: 100%;
+}
+
+.menuToggle{
+    transition: all ease-in-out 0.2s;
 }
 
 @keyframes fadeIn {
