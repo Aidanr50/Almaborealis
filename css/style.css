@@ -1,6 +1,7 @@
 html{
     font-family: 'Nunito', sans-serif !important;
     height: -webkit-fill-available;
+    scroll-behavior: smooth;
 }
 
 .view{
@@ -35,6 +36,10 @@ html{
     right: 5%;
 }
 
+.hover-card{
+    transition: all ease-in-out 0.2s;
+}
+
 /* CONFIGURATOR */
 
 .prod-img img{
@@ -55,6 +60,17 @@ select{
 .menuToggle{
     transition: all ease-in-out 0.2s;
 }
+
+#myBtn {
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
 
 @keyframes fadeIn {
     0% {
@@ -81,8 +97,15 @@ select{
 
     .prod-img{
         height: 500px;
-        background-color: #ccc;
         flex: 1 1 60%
+    }
+
+    .hover-card{
+        opacity: 0 !important;
+    }
+
+    .cover-card {
+        top: 67.5%;
     }
   }
 
