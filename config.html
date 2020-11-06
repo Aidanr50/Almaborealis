@@ -42,12 +42,10 @@
             <div class="container px-5 py-5 md:px-0 md:py-24 mx-auto">
                 <div class="flex flex-wrap">
                 <div class="prod-img w-1/2 relative flex items-center justify-center">
-                    <div>
                         <img id="body-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-body-lowres-green.png" alt="" srcset="">
                         <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-arm-lowres-blue.png" alt="" srcset="">
                         <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-hem-lowres-red.png" alt="" srcset="">
                         <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-neck-lowres-red.png" alt="" srcset="">
-                    </div>
                 </div>
                 <div class="md:w-1/2 w-full md:pl-10 mb-6 md:mb-0">
                     <h2 class="text-sm title-font text-gray-500 tracking-widest">Convertibles</h2>
@@ -113,17 +111,45 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="flex">
-                            <span class="title-font font-medium text-2xl text-gray-900">£95.00</span>
-                            <button class="flex ml-auto text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Add To Cart</button>
-                        </div>
                     </div>
-                    <div id="customize" class="menuTab">
-                        <div class="options">
+                    <div id="customize" class="menuTab mb-6">
+                        <button id="bodyAccordion" class="accordion w-full py-4 border-b-4 border-green-700 text-left outline-none">Body</button>
+                        <div class="panel">
+                            <div class="px-4 py-4 flex items-center">
+                                <button data-name="red" onclick="changeColour('red','body')" class="bg-red-700 w-8 h-8 mr-4 body-button rounded-full relative"></button>
+                                <button data-name="blue" onclick="changeColour('blue','body')" class="bg-blue-700 w-8 h-8 mr-4 body-button rounded-full relative"></button>
+                                <button data-name="green" onclick="changeColour('green','body')" class="bg-green-700 w-8 h-8 mr-4 body-button rounded-full relative selected"></button>
+                            </div>
+                        </div>
+                        <button id="armAccordion" class="accordion w-full py-4 border-b-4 border-blue-700 text-left outline-none">Arms</button>
+                        <div class="panel">
+                            <div class="px-4 py-4 flex items-center">
+                                <button data-name="red" onclick="changeColour('red','arm')" class="bg-red-700 w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                                <button data-name="blue" onclick="changeColour('blue','arm')" class="bg-blue-700 w-8 h-8 mr-4 arm-button rounded-full relative selected"></button>
+                                <button data-name="green" onclick="changeColour('green','arm')" class="bg-green-700 w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                            </div>
+                        </div>
+                        <button id="collarAccordion" class="accordion w-full py-4 border-b-4 border-red-600 text-left outline-none">Collar</button>
+                        <div class="panel">
+                            <div class="px-4 py-4 flex items-center">
+                                <button data-name="red" onclick="changeColour('red','collar')" class="bg-red-700 w-8 h-8 mr-4 collar-button rounded-full relative selected"></button>
+                                <button data-name="blue" onclick="changeColour('blue','collar')" class="bg-blue-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
+                                <button data-name="green" onclick="changeColour('green','collar')" class="bg-green-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
+                            </div>
+                        </div>
+                        <button id="hemAccordion" class="accordion w-full py-4 border-b-4 border-red-700 text-left outline-none">Hem</button>
+                        <div class="panel">
+                            <div class="px-4 py-4 flex items-center">
+                                <button data-name="red" onclick="changeColour('red','hem')" class="bg-red-700 w-8 h-8 mr-4 hem-button rounded-full relative selected relative"></button>
+                                <button data-name="blue" onclick="changeColour('blue','hem')" class="bg-blue-700 w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                                <button data-name="green" onclick="changeColour('green','hem')" class="bg-green-700 w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                            </div>
+                        </div>
+                        <!--<div class="options">
                             <form action="">
 
                                 <div class="mb-3">
-                                    <label class="mb-1 inline-block" for="">Body:</label>
+                                    <label class="mb-1 inline-block text-gray-500" for="">Body:</label>
                                     <div class="size btn_grid">
                                         <select name="" id="body-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="bodyChange()">
                                             <option class="body" data-name="green" value="green" selected="selected">Green</option>
@@ -134,7 +160,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="mb-1 inline-block" for="">Arms:</label>
+                                    <label class="mb-1 inline-block text-gray-500" for="">Arms:</label>
                                     <div class="size btn_grid">
                                         <select name="" id="arm-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="armChange()">
                                             <option data-name="green" value="green">Green</option>
@@ -145,7 +171,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="mb-1 inline-block" for="">Collar:</label>
+                                    <label class="mb-1 inline-block text-gray-500" for="">Collar:</label>
                                     <div class="size btn_grid">
                                         <select name="" id="collar-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="collarChange()">
                                             <option data-name="green" value="green">Green</option>
@@ -156,7 +182,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="mb-1 inline-block" for="">Hem:</label>
+                                    <label class="mb-1 inline-block text-gray-500" for="">Hem:</label>
                                     <div class="size btn_grid">
                                         <select name="" id="hem-pick" class="px-2 py-1 border-solid border-2 border-gray-300" onchange="hemChange()">
                                             <option data-name="green" value="green">Green</option>
@@ -166,12 +192,18 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </div>-->
+                    </div>
+                    <div class="flex">
+                        <span class="title-font font-medium text-2xl text-gray-900">£95.00</span>
+                        <button class="flex ml-auto text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Add To Cart</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <div class="py-24"></div>
 
     <!--FOOTER-->
     <footer class="bg-red-500">

@@ -1,61 +1,76 @@
-//Body variables
-const bodySelect = document.getElementById("body-pick");
-const bodyImage = document.getElementById("body-img");
-const bodyBox = document.getElementById("bodyBox")
-const bodyTag = document.getElementById("bodyTag")
-//Arm Variables
-const armSelect = document.getElementById("arm-pick");
-const armImage = document.getElementById("arm-img");
-const armBox = document.getElementById("armBox")
-const armTag = document.getElementById("armTag")
-//Collar Variables
-const collarSelect = document.getElementById("collar-pick");
-const collarImage = document.getElementById("collar-img");
-const collarBox = document.getElementById("collarBox")
-const collarTag = document.getElementById("collarTag")
-//Hem Variables
-const hemSelect = document.getElementById("hem-pick");
-const hemImage = document.getElementById("hem-img");
-const hemBox = document.getElementById("hemBox")
-const hemTag = document.getElementById("hemTag")
+// //Body variables
+// const bodySelect = document.getElementById("body-pick");
+// const bodyImage = document.getElementById("body-img");
+// const bodyBox = document.getElementById("bodyBox")
+// const bodyTag = document.getElementById("bodyTag")
+// //Arm Variables
+// const armSelect = document.getElementById("arm-pick");
+// const armImage = document.getElementById("arm-img");
+// const armBox = document.getElementById("armBox")
+// const armTag = document.getElementById("armTag")
+// //Collar Variables
+// const collarSelect = document.getElementById("collar-pick");
+// const collarImage = document.getElementById("collar-img");
+// const collarBox = document.getElementById("collarBox")
+// const collarTag = document.getElementById("collarTag")
+// //Hem Variables
+// const hemSelect = document.getElementById("hem-pick");
+// const hemImage = document.getElementById("hem-img");
+// const hemBox = document.getElementById("hemBox")
+// const hemTag = document.getElementById("hemTag")
 
-//Changes body colour
-function bodyChange() {
-    let colour = bodySelect.value;
-    bodyImage.src = `img/config/jumper/jumper-body-lowres-${colour}.png`;
-    bodyBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700")
-    bodyBox.classList.add(`bg-${colour}-700`)
-    bodyTag.innerHTML = colour
-}
-//Changes arm colour
-function armChange() {
-    let colour = armSelect.value;
-    armImage.src = `img/config/jumper/jumper-arm-lowres-${colour}.png`;
-    armBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700")
-    armBox.classList.add(`bg-${colour}-700`)
-    armTag.innerHTML = colour
-}
-//Changes collar colour
-function collarChange() {
-    let colour = collarSelect.value; 
-    collarImage.src = `img/config/jumper/jumper-neck-lowres-${colour}.png`;
-    collarBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700")
-    collarBox.classList.add(`bg-${colour}-700`)
-    collarTag.innerHTML = colour
-}
-//Changes hem colour
-function hemChange() {
-    let colour = hemSelect.value;
-    hemImage.src = `img/config/jumper/jumper-hem-lowres-${colour}.png`;
-    hemBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700")
-    hemBox.classList.add(`bg-${colour}-700`)
-    hemTag.innerHTML = colour
+// //Changes body colour
+// function bodyChange() {
+//     let colour = bodySelect.value;
+//     bodyImage.src = `img/config/jumper/jumper-body-lowres-${colour}.png`;
+//     bodyBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700")
+//     bodyBox.classList.add(`bg-${colour}-700`)
+//     bodyTag.innerHTML = colour
+// }
+// //Changes arm colour
+// function armChange() {
+//     let colour = armSelect.value;
+//     armImage.src = `img/config/jumper/jumper-arm-lowres-${colour}.png`;
+//     armBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700")
+//     armBox.classList.add(`bg-${colour}-700`)
+//     armTag.innerHTML = colour
+// }
+// //Changes collar colour
+// function collarChange() {
+//     let colour = collarSelect.value; 
+//     collarImage.src = `img/config/jumper/jumper-neck-lowres-${colour}.png`;
+//     collarBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700")
+//     collarBox.classList.add(`bg-${colour}-700`)
+//     collarTag.innerHTML = colour
+// }
+// //Changes hem colour
+// function hemChange() {
+//     let colour = hemSelect.value;
+//     hemImage.src = `img/config/jumper/jumper-hem-lowres-${colour}.png`;
+//     hemBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700")
+//     hemBox.classList.add(`bg-${colour}-700`)
+//     hemTag.innerHTML = colour
+// }
+
+function changeColour(colour, part) {
+  let colour_btn_els = document.querySelectorAll(`.${part}-button`);
+  let imagery_el = document.getElementById(`${part}-img`);
+  let partBox = document.getElementById(`${part}Box`);
+  let partTag = document.getElementById(`${part}Tag`);
+  let accordion = document.getElementById(`${part}Accordion`);
+
+  imagery_el.src = `img/config/jumper/jumper-${part}-lowres-${colour}.png`;
+  partBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700");
+  partBox.classList.add(`bg-${colour}-700`);
+  partTag.innerHTML = colour;
+  accordion.classList.remove("border-red-700", "border-green-700", "border-blue-700");
+  accordion.classList.add(`border-${colour}-700`);
 }
 
-//Get the button
+//Scroll to top Script
+
 var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -66,11 +81,12 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+//Configurator tab motion
 
 function tabOpen(e, tab) {
     var i, tabcontent, tablinks;
@@ -86,4 +102,22 @@ function tabOpen(e, tab) {
     e.currentTarget.className += " text-red-700 border-b-2 border-red-400";
   }
 
-  document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen").click();
+
+
+//Accordion Scripts
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");  
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}

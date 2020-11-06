@@ -46,19 +46,27 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 550px;
 }
 
 .prod-detail{
     flex: 1 1 40%;
 }
 
-select{
-    width: 100%;
+.selected::after{
+    content: '';
+    position: absolute;
+    border-radius: 999999px;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: solid 2px white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .menuToggle{
-    transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.4s;
 }
 
 #myBtn {
@@ -66,7 +74,30 @@ select{
     right: 30px;
     z-index: 99;
     transition: all ease-in-out 0.3s;
+}
+
+.accordion {
+    transition: 0.4s;
+    
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
 
 @keyframes fadeIn {
     0% {
