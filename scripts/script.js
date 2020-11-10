@@ -58,13 +58,23 @@ function changeColour(colour, part) {
   let partBox = document.getElementById(`${part}Box`);
   let partTag = document.getElementById(`${part}Tag`);
   let accordion = document.getElementById(`${part}Accordion`);
+  let styleSelector = document.getElementById(`collarStyle`);
+  let style = styleSelector.value;
 
-  imagery_el.src = `img/config/jumper/jumper-${part}-lowres-${colour}.png`;
+  imagery_el.src = `img/config/dress/dress-${part}-${style}-${colour}.png`;
   partBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700");
   partBox.classList.add(`bg-${colour}-700`);
   partTag.innerHTML = colour;
   accordion.classList.remove("border-red-700", "border-green-700", "border-blue-700");
   accordion.classList.add(`border-${colour}-700`);
+}
+
+function changeStyle(style, part) {
+  let currentStyle = style.value;
+  let imageSrc = document.getElementById(`${part}-img`).src;
+  
+  imageSrc.replace
+  console.log(imageSrc)
 }
 
 //Scroll to top Script

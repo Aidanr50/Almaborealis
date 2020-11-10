@@ -42,10 +42,14 @@
             <div class="container px-5 py-5 md:px-0 md:py-24 mx-auto">
                 <div class="flex flex-wrap">
                 <div class="prod-img w-1/2 relative flex items-center justify-center">
-                        <img id="body-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-body-lowres-green.png" alt="" srcset="">
+                        <!-- <img id="body-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-body-lowres-green.png" alt="" srcset="">
                         <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-arm-lowres-blue.png" alt="" srcset="">
                         <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-hem-lowres-red.png" alt="" srcset="">
-                        <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-neck-lowres-red.png" alt="" srcset="">
+                        <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-neck-lowres-red.png" alt="" srcset=""> -->
+                        <img id="body-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-body-standard-yellow.png" alt="" srcset="">
+                        <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-arm-standard-yellow.png" alt="" srcset="">
+                        <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-hem-long-lightblue.png" alt="" srcset="">
+                        <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-collar-regal-lightblue.png" alt="" srcset="">
                 </div>
                 <div class="md:w-1/2 w-full md:pl-10 mb-6 md:mb-0">
                     <h2 class="text-sm title-font text-gray-500 tracking-widest">Convertibles</h2>
@@ -131,10 +135,20 @@
                         </div>
                         <button id="collarAccordion" class="accordion w-full py-4 border-b-4 border-red-600 text-left outline-none text-gray-600">Collar</button>
                         <div class="panel">
-                            <div class="px-4 py-4 flex items-center">
-                                <button data-name="red" onclick="changeColour('red','collar')" class="bg-red-700 w-8 h-8 mr-4 collar-button rounded-full relative selected"></button>
-                                <button data-name="blue" onclick="changeColour('blue','collar')" class="bg-blue-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
-                                <button data-name="green" onclick="changeColour('green','collar')" class="bg-green-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
+                            <div class="flex px-4 py-4">
+                                <div class="flex">
+                                    <div class="mr-8">  
+                                        <select name="collarStyle" id="collarStyle" class="border px-2 py-1" onchange="changeStyle(this, 'collar')">
+                                            <option value="regal">Regal</option>
+                                            <option value="frilly">Frilly</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button data-name="red" onclick="changeColour('red','collar')" class="bg-red-700 w-8 h-8 mr-4 collar-button rounded-full relative selected"></button>
+                                        <button data-name="blue" onclick="changeColour('lightblue','collar')" class="bg-blue-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
+                                        <button data-name="green" onclick="changeColour('green','collar')" class="bg-green-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <button id="hemAccordion" class="accordion w-full py-4 border-b-4 border-red-700 text-left outline-none text-gray-600">Hem</button>
