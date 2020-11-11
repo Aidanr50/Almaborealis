@@ -30,6 +30,11 @@ html{
     font-family: 'Pangolin', cursive;
 }
 
+.close{
+    top: 2rem;
+    right: 2rem;
+}
+
 .cover-card{
     top: 72.5%;
     left: 5%;
