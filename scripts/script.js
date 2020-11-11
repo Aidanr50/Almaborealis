@@ -54,14 +54,13 @@
 
 function changeColour(colour, part) {
   let colour_btn_els = document.querySelectorAll(`.${part}-button`);
-  let imagery_el = document.getElementById(`${part}-img`);
   let partBox = document.getElementById(`${part}Box`);
   let partTag = document.getElementById(`${part}Tag`);
   let accordion = document.getElementById(`${part}Accordion`);
-  let styleSelector = document.getElementById(`collarStyle`);
-  let style = styleSelector.value;
+  let styleSelector = document.getElementById(`${part}Style`);
 
-  imagery_el.src = `img/config/dress/dress-${part}-${style}-${colour}.png`;
+  let imagery_el = document.getElementById(`${part}-img`);
+  imagery_el.src = `img/config/dress/dress-${part}-${colour}.png`;
   partBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700");
   partBox.classList.add(`bg-${colour}-700`);
   partTag.innerHTML = colour;
@@ -77,7 +76,7 @@ function changeStyle(style, part) {
   console.log(imageSrc)
 }
 
-//Scroll to top Script
+// Scroll to top Script
 
 var mybutton = document.getElementById("myBtn");
 
@@ -96,7 +95,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-//Configurator tab motion
+// Configurator tab motion
 
 function tabOpen(e, tab) {
     var i, tabcontent, tablinks;
@@ -115,7 +114,7 @@ function tabOpen(e, tab) {
 document.getElementById("defaultOpen").click();
 
 
-//Accordion Scripts
+// Accordion Scripts
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -132,10 +131,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-
-document.addEventListener('click', function() {
-
-})
+// Mobile Navigation
 
 function menuToggle() {
   let nav = document.getElementById('mobileNav');
