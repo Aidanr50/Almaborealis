@@ -131,3 +131,20 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+
+
+document.addEventListener('click', function() {
+
+})
+
+function menuToggle() {
+  let nav = document.getElementById('mobileNav');
+  
+  if (nav.classList.contains('hidden')) {
+    nav.classList.add('block')
+    nav.classList.remove('hidden')
+  } else {
+    nav.classList.add('hidden')
+    nav.classList.remove('block')
+  }
+}
