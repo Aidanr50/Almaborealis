@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,74 +9,147 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/jumper-ico.png">
 </head>
+
 <body>
     <section>
         <header class="h-auto md:h-20 text-gray-700 body-font fixed w-full bg-white border-b-2 border-gray-200 z-50">
             <div class="container mx-auto flex px-5 py-2 md:p-5 flex-row items-center justify-between">
-                    <a href="home.html" class="flex title-font font-medium items-center text-gray-900 mb-0 cursor-pointer">
-                        <img src="img/almaborealis-logo.png" class="h-10" alt="Almaborealis logo">
-                    </a>
-                    <nav class="hidden md:ml-auto md:block lg:flex flex-wrap items-center text-base justify-c enter">
-                        <a href="about.html" class="mr-6 hover:text-gray-900 font-medium text-red-700 cursor-pointer hidden md:block">About</a>
-                        <a href="config.html" class="mr-6 hover:text-gray-900 font-medium text-red-700 cursor-pointer hidden md:block">Shop</a>
-                        <a href="contact.html" class="mr-12 hover:text-gray-900 font-medium text-red-700 cursor-pointer hidden md:block">Contact</a>
-                    </nav>
-                    <a href="config.html" class="lg:inline-flex items-center bg-red-700 text-white border-0 py-1 px-3 focus:outline-none hover:bg-red-600 rounded text-base mt-4 md:mt-0 hidden">Shop Convertibles
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
-                <button class="lg:hidden burger" onclick="myFunction()">
-                    <svg stroke="currentColour" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 18.005C22 18.555 21.554 19 21.005 19H12.995C12.7311 19 12.478 18.8952 12.2914 18.7086C12.1048 18.522 12 18.2689 12 18.005C12 17.7411 12.1048 17.488 12.2914 17.3014C12.478 17.1148 12.7311 17.01 12.995 17.01H21.005C21.555 17.01 22 17.455 22 18.005V18.005Z" fill="black"/>
-                        <path d="M22 11.9999C22 12.5499 21.554 12.9949 21.005 12.9949H2.995C2.73111 12.9949 2.47803 12.8901 2.29143 12.7035C2.10483 12.5169 2 12.2638 2 11.9999C2 11.736 2.10483 11.4829 2.29143 11.2963C2.47803 11.1097 2.73111 11.0049 2.995 11.0049H21.005C21.555 11.0049 22 11.4509 22 11.9999V11.9999Z" fill="black"/>
-                        <path d="M21.005 6.99C21.2689 6.99 21.522 6.88517 21.7086 6.69857C21.8952 6.51197 22 6.25889 22 5.995C22 5.73111 21.8952 5.47803 21.7086 5.29143C21.522 5.10483 21.2689 5 21.005 5H8.995C8.86433 5 8.73495 5.02574 8.61423 5.07574C8.49351 5.12574 8.38382 5.19903 8.29143 5.29143C8.19903 5.38382 8.12574 5.49351 8.07574 5.61423C8.02574 5.73495 8 5.86433 8 5.995C8 6.12567 8.02574 6.25505 8.07574 6.37577C8.12574 6.49649 8.19903 6.60618 8.29143 6.69857C8.38382 6.79097 8.49351 6.86426 8.61423 6.91426C8.73495 6.96426 8.86433 6.99 8.995 6.99H21.005Z" fill="black"/>
+                <a href="home.html" class="flex title-font font-medium items-center text-gray-900 mb-0 cursor-pointer">
+                    <img src="img/almaborealis-logo.png" class="h-10" alt="Almaborealis logo">
+                </a>
+                <nav class="hidden md:ml-auto md:block lg:flex flex-wrap items-center text-base justify-c enter">
+                    <a href="about.html"
+                        class="mr-6 hover:text-gray-900 font-medium text-red-700 cursor-pointer hidden md:block">About</a>
+                    <a href="config.html"
+                        class="mr-6 hover:text-gray-900 font-medium text-red-700 cursor-pointer hidden md:block">Shop</a>
+                    <a href="contact.html"
+                        class="mr-12 hover:text-gray-900 font-medium text-red-700 cursor-pointer hidden md:block">Contact</a>
+                </nav>
+                <a href="config.html"
+                    class="lg:inline-flex items-center bg-red-700 text-white border-0 py-1 px-3 focus:outline-none hover:bg-red-600 rounded text-base mt-4 md:mt-0 hidden">Shop
+                    Convertibles
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
                     </svg>
-                </button>              
+                </a>
+                <button class="lg:hidden burger" onclick="myFunction()">
+                    <svg stroke="currentColour" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22 18.005C22 18.555 21.554 19 21.005 19H12.995C12.7311 19 12.478 18.8952 12.2914 18.7086C12.1048 18.522 12 18.2689 12 18.005C12 17.7411 12.1048 17.488 12.2914 17.3014C12.478 17.1148 12.7311 17.01 12.995 17.01H21.005C21.555 17.01 22 17.455 22 18.005V18.005Z"
+                            fill="black" />
+                        <path
+                            d="M22 11.9999C22 12.5499 21.554 12.9949 21.005 12.9949H2.995C2.73111 12.9949 2.47803 12.8901 2.29143 12.7035C2.10483 12.5169 2 12.2638 2 11.9999C2 11.736 2.10483 11.4829 2.29143 11.2963C2.47803 11.1097 2.73111 11.0049 2.995 11.0049H21.005C21.555 11.0049 22 11.4509 22 11.9999V11.9999Z"
+                            fill="black" />
+                        <path
+                            d="M21.005 6.99C21.2689 6.99 21.522 6.88517 21.7086 6.69857C21.8952 6.51197 22 6.25889 22 5.995C22 5.73111 21.8952 5.47803 21.7086 5.29143C21.522 5.10483 21.2689 5 21.005 5H8.995C8.86433 5 8.73495 5.02574 8.61423 5.07574C8.49351 5.12574 8.38382 5.19903 8.29143 5.29143C8.19903 5.38382 8.12574 5.49351 8.07574 5.61423C8.02574 5.73495 8 5.86433 8 5.995C8 6.12567 8.02574 6.25505 8.07574 6.37577C8.12574 6.49649 8.19903 6.60618 8.29143 6.69857C8.38382 6.79097 8.49351 6.86426 8.61423 6.91426C8.73495 6.96426 8.86433 6.99 8.995 6.99H21.005Z"
+                            fill="black" />
+                    </svg>
+                </button>
             </div>
-          </header>
-          <div class="spacer"></div>
+        </header>
+        <div class="spacer"></div>
     </section>
 
     <main>
-        
+        <!--ROLANDAS-->
+        <section class="text-gray-700 body-font">
+
+
+
+
+            <div class="flex w-full bg-cover h-3.5rem bg-left-top pb-12">
+                <div class="relative text-center flex justify-center items-center highlight ">
+
+
+                    <div class="text-5xl text-red-600 font-bold text-center absolute text-shadow-lg">Our Story</div>
+
+                    <img alt="content" class="object-cover object-center h-3.5rem w-full" src="img/alma1.png">
+                </div>
+            </div>
+
+            <div class="flex flex-col text-center w-full mb-20 aos-init aos-animate" data-aos="fade-up">
+                <h2 class="text-2xl font-medium title-font mb-4 highlight">Almaborealis Knitwear Design </h2>
+                <p class="mb-8 max-w-screen-lg mx-auto text-gray-700">
+                    Almaborealis is the creation of Maija Nygren, a Finnish knitwear designer, passionate
+                    environmentalist and a mother. Maija grew up in Finland surrounded by knitting, and her grandparents
+                    inherent ability to re-use material goods. Making is part of Maija’s DNA, but in today’s
+                    environmental challenges, she could only create new products into this world, if they carried
+                    substantial meaning, had a purpose beyond being a disposable commodity.
+                </p>
+                <p class="mb-8 max-w-screen-lg mx-auto text-gray-700">
+                    Maija trained at Galashiels School of Textiles and I realised that she didn’t want to be part of our
+                    throw-away culture and create more stuff that will end up on the landfill.
+                </p>
+                <p class="mb-8 max-w-screen-lg mx-auto text-gray-700">
+                    Maija specialises in designing for kids, although many of her creations are equally enjoyed by an
+                    adult audience. Inspired by her previous career in children’s theatre design, classic toy designers
+                    and early childhood educational theorists, Maija designed a ‘future proof’ clothing concept that
+                    protects from elements, passes on traditional craft skills, and endures through growth spurts of
+                    children:
+                </p>
+            </div>
+
+
+
+
+        </section>
+
+
+
+
+        <!---->
+
+
     </main>
 
     <!--FOOTER-->
     <footer class="bg-red-500">
         <div class="container px-4 py-8 mx-auto flex items-center sm:flex-row flex-col">
             <a class="font-medium items-center md:justify-start justify-center">
-            <img class="h-8" src="img/almaborealis-logo-white.png" alt="Almaborealis logo">
+                <img class="h-8" src="img/almaborealis-logo-white.png" alt="Almaborealis logo">
             </a>
-            <p class="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-white sm:py-2 sm:mt-0 mt-4">© 2020 Almaborealis —
-            <a href="https://twitter.com/knyttneve" class="text-white ml-1" rel="noopener noreferrer" target="_blank">@almaborealis</a>
+            <p class="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-white sm:py-2 sm:mt-0 mt-4">© 2020
+                Almaborealis —
+                <a href="https://twitter.com/knyttneve" class="text-white ml-1" rel="noopener noreferrer"
+                    target="_blank">@almaborealis</a>
             </p>
             <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a href="https://www.facebook.com/almaborealis/" class="text-white cursor-pointer">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
-            </a>
-            <a href="https://twitter.com/almaborealis?lang=en" class="ml-3 text-white cursor-pointer">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                </svg>
-            </a>
-            <a href="https://www.instagram.com/almaborealis/?hl=en" class="ml-3 text-white cursor-pointer">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                </svg>
-            </a>
-            <a href="https://www.youtube.com/channel/UCDd4d-Z8lfElPaGhipIwpnw" class="ml-3 text-gray-500 cursor-pointer">
-                <svg width="20" height="20" viewBox="0 0 211 148" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M206.596 23.1191C205.395 18.6423 203.04 14.5597 199.767 11.28C196.494 8.00018 192.417 5.63826 187.945 4.43057C171.485 8.99005e-07 105.5 0 105.5 0C105.5 0 39.5154 -8.99005e-07 23.0546 4.40701C18.5807 5.61078 14.5021 7.97139 11.2284 11.2518C7.95458 14.5321 5.6009 18.6168 4.40368 23.0955C-8.98327e-07 39.5924 0 74 0 74C0 74 -8.98327e-07 108.408 4.40368 124.881C6.82924 133.978 13.9882 141.142 23.0546 143.569C39.5154 148 105.5 148 105.5 148C105.5 148 171.485 148 187.945 143.569C197.035 141.142 204.171 133.978 206.596 124.881C211 108.408 211 74 211 74C211 74 211 39.5924 206.596 23.1191ZM84.5413 105.58V42.4204L139.175 73.7643L84.5413 105.58Z" fill="white"/>
-                </svg>  
-            </a>
+                <a href="https://www.facebook.com/almaborealis/" class="text-white cursor-pointer">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/almaborealis?lang=en" class="ml-3 text-white cursor-pointer">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/almaborealis/?hl=en" class="ml-3 text-white cursor-pointer">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/channel/UCDd4d-Z8lfElPaGhipIwpnw"
+                    class="ml-3 text-gray-500 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 211 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M206.596 23.1191C205.395 18.6423 203.04 14.5597 199.767 11.28C196.494 8.00018 192.417 5.63826 187.945 4.43057C171.485 8.99005e-07 105.5 0 105.5 0C105.5 0 39.5154 -8.99005e-07 23.0546 4.40701C18.5807 5.61078 14.5021 7.97139 11.2284 11.2518C7.95458 14.5321 5.6009 18.6168 4.40368 23.0955C-8.98327e-07 39.5924 0 74 0 74C0 74 -8.98327e-07 108.408 4.40368 124.881C6.82924 133.978 13.9882 141.142 23.0546 143.569C39.5154 148 105.5 148 105.5 148C105.5 148 171.485 148 187.945 143.569C197.035 141.142 204.171 133.978 206.596 124.881C211 108.408 211 74 211 74C211 74 211 39.5924 206.596 23.1191ZM84.5413 105.58V42.4204L139.175 73.7643L84.5413 105.58Z"
+                            fill="white" />
+                    </svg>
+                </a>
             </span>
         </div>
     </footer>
 
     <script src="scripts/script.js"></script>
 </body>
+
 </html>
