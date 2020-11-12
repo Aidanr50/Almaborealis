@@ -61,10 +61,10 @@ function changeColour(colour, part) {
 
   let imagery_el = document.getElementById(`${part}-img`);
   imagery_el.src = `img/config/dress/dress-${part}-${colour}.png`;
-  partBox.classList.remove("bg-red-700", "bg-green-700", "bg-blue-700");
+  partBox.classList.remove("bg-red-700", "bg-yellow-700", "bg-blue-700");
   partBox.classList.add(`bg-${colour}-700`);
   partTag.innerHTML = colour;
-  accordion.classList.remove("border-red-700", "border-green-700", "border-blue-700");
+  accordion.classList.remove("border-red-700", "border-yellow-700", "border-blue-700");
   accordion.classList.add(`border-${colour}-700`);
 }
 
