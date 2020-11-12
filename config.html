@@ -10,7 +10,7 @@
 </head>
 <body>
     <section>
-        <header class="h-auto md:h-20 text-gray-700 body-font fixed w-full bg-white border-b-2 border-gray-200 z-50">
+        <header class="h-auto md:h-20 text-gray-700 body-font fixed w-full bg-white border-b-2 border-gray-200 z-40">
             <div class="container mx-auto flex px-5 py-2 md:p-5 flex-row items-center justify-between">
                     <a href="home.html" class="flex title-font font-medium items-center text-gray-900 mb-0 cursor-pointer">
                         <img src="img/almaborealis-logo.png" class="h-10" alt="Almaborealis logo">
@@ -53,9 +53,12 @@
                         <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-arm-lowres-blue.png" alt="" srcset="">
                         <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-hem-lowres-red.png" alt="" srcset="">
                         <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-neck-lowres-red.png" alt="" srcset=""> -->
-                        <img id="body-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-body-standard-yellow.png" alt="" srcset="">
-                        <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-arm-standard-yellow.png" alt="" srcset="">
-                        <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-hem-long-lightblue.png" alt="" srcset="">
+                        <img id="body-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-body-yellow.png" alt="" srcset="">
+                        <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-arm-yellow.png" alt="" srcset="">
+                        <img id="panel-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-panel-lightblue.png" alt="" srcset="">
+                        <img id="cuffs-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-cuffs-red.png" alt="" srcset="">
+                        <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-hem-lightblue.png" alt="" srcset="">
+                        <img id="skirt-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-skirt-red.png" alt="" srcset="">
                         <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-collar-regal-lightblue.png" alt="" srcset="">
                 </div>
                 <div class="md:w-1/2 w-full md:pl-10 mb-6 md:mb-0">
@@ -81,9 +84,9 @@
                                         <p class="mr-2">Collar:</p>
                                         <span id="collarTag" class="capitalize">Red</span>
                                     </div>
-                                    <div id="bodyBox" class="flex p-2 bg-green-700 text-white mb-2">
+                                    <div id="bodyBox" class="flex p-2 bg-yellow-700 text-white mb-2">
                                         <p class="mr-2">Body:</p>
-                                        <span id="bodyTag" class="capitalize">Green</span>
+                                        <span id="bodyTag" class="capitalize">yellow</span>
                                     </div>
                                 </div>
                                 <div>
@@ -124,20 +127,20 @@
                         </div>
                     </div>
                     <div id="customize" class="menuTab mb-6">
-                        <button id="bodyAccordion" class="accordion w-full py-4 border-b-4 border-green-700 text-left outline-none text-gray-600">Body</button>
+                        <button id="bodyAccordion" class="accordion w-full py-4 border-b-4 border-yellow-700 text-left outline-none text-gray-600">Body</button>
                         <div class="panel">
                             <div class="px-4 py-4 flex items-center">
                                 <button data-name="red" onclick="changeColour('red','body')" class="bg-red-700 w-8 h-8 mr-4 body-button rounded-full relative"></button>
-                                <button data-name="blue" onclick="changeColour('blue','body')" class="bg-blue-700 w-8 h-8 mr-4 body-button rounded-full relative"></button>
-                                <button data-name="green" onclick="changeColour('green','body')" class="bg-green-700 w-8 h-8 mr-4 body-button rounded-full relative selected"></button>
+                                <button data-name="lightblue" onclick="changeColour('lightblue','body')" class="bg-blue-700 w-8 h-8 mr-4 body-button rounded-full relative"></button>
+                                <button data-name="yellow" onclick="changeColour('yellow','body')" class="bg-yellow-700 w-8 h-8 mr-4 body-button rounded-full relative selected"></button>
                             </div>
                         </div>
                         <button id="armAccordion" class="accordion w-full py-4 border-b-4 border-blue-700 text-left outline-none text-gray-600">Arms</button>
                         <div class="panel">
                             <div class="px-4 py-4 flex items-center">
                                 <button data-name="red" onclick="changeColour('red','arm')" class="bg-red-700 w-8 h-8 mr-4 arm-button rounded-full relative"></button>
-                                <button data-name="blue" onclick="changeColour('blue','arm')" class="bg-blue-700 w-8 h-8 mr-4 arm-button rounded-full relative selected"></button>
-                                <button data-name="green" onclick="changeColour('green','arm')" class="bg-green-700 w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                                <button data-name="lightblue" onclick="changeColour('lightblue','arm')" class="bg-blue-700 w-8 h-8 mr-4 arm-button rounded-full relative selected"></button>
+                                <button data-name="yellow" onclick="changeColour('yellow','arm')" class="bg-yellow-700 w-8 h-8 mr-4 arm-button rounded-full relative"></button>
                             </div>
                         </div>
                         <button id="collarAccordion" class="accordion w-full py-4 border-b-4 border-red-600 text-left outline-none text-gray-600">Collar</button>
@@ -145,15 +148,15 @@
                             <div class="flex px-4 py-4">
                                 <div class="flex">
                                     <div class="mr-8">  
-                                        <select name="collarStyle" id="collarStyle" class="border px-2 py-1" onchange="changeStyle(this, 'collar')">
+                                        <select name="collarStyle" id="collarStyle" class="border px-2 py-1" onchange="changeColour(colour, part)">
                                             <option value="regal">Regal</option>
                                             <option value="frilly">Frilly</option>
                                         </select>
                                     </div>
                                     <div>
                                         <button data-name="red" onclick="changeColour('red','collar')" class="bg-red-700 w-8 h-8 mr-4 collar-button rounded-full relative selected"></button>
-                                        <button data-name="blue" onclick="changeColour('lightblue','collar')" class="bg-blue-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
-                                        <button data-name="green" onclick="changeColour('green','collar')" class="bg-green-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
+                                        <button data-name="lightblue" onclick="changeColour('lightblue','collar')" class="bg-blue-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
+                                        <button data-name="yellow" onclick="changeColour('yellow','collar')" class="bg-yellow-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
                                     </div>
                                 </div>
                             </div>
@@ -162,8 +165,8 @@
                         <div class="panel">
                             <div class="px-4 py-4 flex items-center">
                                 <button data-name="red" onclick="changeColour('red','hem')" class="bg-red-700 w-8 h-8 mr-4 hem-button rounded-full relative selected relative"></button>
-                                <button data-name="blue" onclick="changeColour('blue','hem')" class="bg-blue-700 w-8 h-8 mr-4 hem-button rounded-full relative"></button>
-                                <button data-name="green" onclick="changeColour('green','hem')" class="bg-green-700 w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                                <button data-name="lightblue" onclick="changeColour('lightblue','hem')" class="bg-blue-700 w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                                <button data-name="yellow" onclick="changeColour('yellow','hem')" class="bg-yellow-700 w-8 h-8 mr-4 hem-button rounded-full relative"></button>
                             </div>
                         </div>
                         <!--<div class="options">
@@ -224,7 +227,7 @@
         </section>
     </main>
 
-    <div class="py-24"></div>
+    
 
     <!--FOOTER-->
     <footer class="bg-red-500">
@@ -261,6 +264,7 @@
         </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/mobileNav.js"></script>
+    <script src="scripts/configurator.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@
   <button onclick="topFunction()" id="myBtn" class="opacity-0 fixed bg-red-700 text-white cursor-pointer p-4 rounded hover:bg-red-600" title="Go to top">Top</button>
 <!--HERO-->
     <section class="text-gray-700 body-font h-screen overflow-x-hidden view">
-      <header class="h-auto md:h-20 text-gray-700 body-font fixed w-full bg-white border-b-2 border-gray-200 z-50">
+      <header class="h-auto md:h-20 text-gray-700 body-font fixed w-full bg-white border-b-2 border-gray-200 z-40">
         <div class="container mx-auto flex px-5 py-2 md:p-5 flex-row items-center justify-between">
                 <a href="home.html" class="flex title-font font-medium items-center text-gray-900 mb-0 cursor-pointer">
                     <img src="img/almaborealis-logo.png" class="h-10" alt="Almaborealis logo">
@@ -54,13 +54,13 @@
                 <h1 class="text-2xl md:text-4xl mb-6 font-thin uppercase">Clothes that <span class="text-red-700 highlight">kids</span> can make</h1>
                 <p class="mb-8">Almaborealis is a knitwear design lab in Edinburgh, Scotland. We create clothing concepts that share traditional craft skills and embrace circular economy design principals, to make products that take in consideration the environment of future generations.</p>
                 <div>
-                    <a class="text-lg md:text-2xl md:px-4 md:py-2 mr-6 border-solid md:border md:border-gray-800">About Us <span class="ml-2 md:ml-4">
+                    <a href="about.html" class="text-lg md:text-2xl md:px-4 md:py-2 mr-6 border-solid md:border md:border-gray-800">About Us <span class="ml-2 md:ml-4">
                       <svg class="inline" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.292969 1.61767L4.58597 5.99075L0.292969 10.3638L1.70697 11.8042L7.41397 5.99075L1.70697 0.177296L0.292969 1.61767Z" fill="#414141"/>
                       </svg>
                     </span>
                     </a>
-                    <a href="config.html" class="text-lg text-red-700 md:text-2xl md:px-4 md:py-2 md:text-white md:bg-red-700">Convertibles <span class="ml-2 md:ml-4">
+                    <a href="config.html" class="text-lg text-red-700 md:text-2xl md:px-4 md:py-2 md:text-white md:bg-red-700 hover:bg-red-600">Convertibles <span class="ml-2 md:ml-4">
                       <svg class="inline text-white" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.292969 1.61767L4.58597 5.99075L0.292969 10.3638L1.70697 11.8042L7.41397 5.99075L1.70697 0.177296L0.292969 1.61767Z" fill="#ffffff"/>
                       </svg>
@@ -80,8 +80,16 @@
           <h1 class="text-2xl mb-8 highlight">Our <span class="text-red-700">Mission</span></h1>
           <p class="mb-8 max-w-screen-lg mx-auto text-gray-700">Where children will be the future thinkers, decision makers and citizens. By using earthe’s resources, we, adults, make products for children to use and enjoy. How do these products impact the child when they are a grown up? As adults, we can choose for these products to have a positive, or a negative impact on future generations.</p>
           <p class="mb-8 max-w-screen-lg mx-auto text-gray-700">Inspired by theories of Maria Montessori and Friedrich Froebel, combined with circular economy thinking, The Convertibles offer future proof kidswear that holistically considers the end user; the child. From participatory learning activities through to sourcing raw materials and an end-of-life plan of the products, future generations and their world is looked after. Waste becomes no more, and the use natural resources is maximised.</p>
+          <button id="open" class="text-lg text-red-700 md:text-xl md:px-4 md:py-2 md:text-white md:bg-red-700 hover:bg-red-600">Watch the story!</button>
         </div>
       </section>
+
+      <div id="modal" class="fixed inset-0 flex justify-center items-center z-50 bg-red-500 bg-opacity-75 hidden">
+        <svg id="close" class="fixed close cursor-pointer" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.41 11.0002L20.7 2.71019C20.8638 2.51888 20.9494 2.27281 20.9397 2.02113C20.93 1.76946 20.8256 1.53072 20.6475 1.35262C20.4694 1.17453 20.2307 1.0702 19.979 1.06047C19.7274 1.05075 19.4813 1.13636 19.29 1.30019L11 9.59019L2.70997 1.29019C2.52167 1.10188 2.26627 0.996094 1.99997 0.996094C1.73367 0.996094 1.47828 1.10188 1.28997 1.29019C1.10167 1.47849 0.995881 1.73388 0.995881 2.00019C0.995881 2.26649 1.10167 2.52188 1.28997 2.71019L9.58997 11.0002L1.28997 19.2902C1.18529 19.3798 1.10027 19.4902 1.04025 19.6142C0.980225 19.7383 0.946494 19.8734 0.941175 20.0111C0.935855 20.1489 0.959061 20.2862 1.00934 20.4145C1.05961 20.5428 1.13587 20.6594 1.23332 20.7568C1.33078 20.8543 1.44733 20.9305 1.57565 20.9808C1.70398 21.0311 1.84131 21.0543 1.97903 21.049C2.11675 21.0437 2.25188 21.0099 2.37594 20.9499C2.50001 20.8899 2.61033 20.8049 2.69997 20.7002L11 12.4102L19.29 20.7002C19.4813 20.864 19.7274 20.9496 19.979 20.9399C20.2307 20.9302 20.4694 20.8258 20.6475 20.6477C20.8256 20.4697 20.93 20.2309 20.9397 19.9792C20.9494 19.7276 20.8638 19.4815 20.7 19.2902L12.41 11.0002Z" fill="white"/>
+        </svg>
+        <iframe width="80%" height="600px" src="https://www.youtube.com/embed/Lu8M-jBOHPg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
 
 <!--GRID-->
       <section class="overflow-x-hidden">
@@ -93,7 +101,7 @@
               <div class="max-w-md p-4 mx-auto text-center md:text-left">
                 <h2 class="text-xl text-red-700 font-bold">Old Meets New</h2>
                 <p class="text-gray-700 mb-4">Learn more about what makes Convertibles so unique. And why parents and the planet love them.</p>
-                <button class="text-lg px-4 py-2 md:mr-6 border-solid border border-gray-800">About Us <span class="ml-4">
+                <button class="text-lg px-4 py-2 md:mr-6 border-solid border border-gray-800"> <a href="about.html">About Us</a><span class="ml-4">
                   <svg class="inline" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.292969 1.61767L4.58597 5.99075L0.292969 10.3638L1.70697 11.8042L7.41397 5.99075L1.70697 0.177296L0.292969 1.61767Z" fill="#414141"/>
                   </svg>
@@ -507,6 +515,7 @@
   <script>
     AOS.init();
   </script>
-  <script src="scripts/script.js"></script>
+  <script src="scripts/mobileNav.js"></script>
+  <script src="scripts/modal.js"></script>
 </body>
 </html>
