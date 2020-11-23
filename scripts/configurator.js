@@ -82,9 +82,11 @@ function changeColour(colour, part) {
   function createInvoice() {
     let size = document.getElementById("ageSelect").value;
     let qty = document.getElementById("prodQuantity").value;
+    let bodyColour_el = document.getElementById("bodyTag").textContent;
 
     localStorage.setItem("sizeVal", size);
     localStorage.setItem("qtyVal", qty);
+    localStorage.setItem("bodyColour", bodyColour_el);
 
     window.location.href = 'invoice.html';
   }
