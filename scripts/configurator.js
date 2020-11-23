@@ -78,3 +78,13 @@ function changeColour(colour, part) {
       } 
     });
   }
+
+  function createInvoice() {
+    let size = document.getElementById("ageSelect").value;
+    let qty = document.getElementById("prodQuantity").value;
+
+    localStorage.setItem("sizeVal", size);
+    localStorage.setItem("qtyVal", qty);
+
+    window.location.href = 'invoice.html';
+  }

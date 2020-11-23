@@ -104,6 +104,36 @@ html{
     transition: max-height 0.4s ease-in-out;
 }
 
+/* Colours */
+
+.blue {
+    background-color: rgba(29, 78, 216, 1);
+}
+
+.green{
+    background-color: rgba(4, 120, 87, 1);
+}
+
+.grey{
+    background-color: rgba(107, 114, 128, 1);
+}
+
+.lightblue{
+    background-color: rgba(147, 197, 253, 1);
+}
+
+.orange{
+    background-color: rgba(245, 158, 11, 1);
+}
+
+.pink{
+    background-color: rgba(236, 72, 153, 1);
+}
+
+.yellow{
+    background-color: rgba(252, 211, 77, 1);
+}
+
 @keyframes fadeIn {
     0% {
       opacity: 0;

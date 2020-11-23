@@ -80,23 +80,39 @@
                             <span class="text-gray-500">Color</span>
                             <div class="ml-auto flex">
                                 <div class="mr-2">
-                                    <div id="collarBox" class="flex p-2 bg-red-700 text-white mb-2">
+                                    <div id="bodyBox" class="flex p-2 yellow text-white h-full items-center">
                                         <p class="mr-2">Collar:</p>
-                                        <span id="collarTag" class="capitalize">Red</span>
+                                        <span id="bodyTag" class="capitalize">Yellow</span>
                                     </div>
-                                    <div id="bodyBox" class="flex p-2 bg-yellow-700 text-white mb-2">
-                                        <p class="mr-2">Body:</p>
-                                        <span id="bodyTag" class="capitalize">yellow</span>
+                                </div>
+                                <div class="mr-2">
+                                    <div id="collarBox" class="flex p-2 lightblue text-white mb-2">
+                                        <p class="mr-2">Collar:</p>
+                                        <span id="collarTag" class="capitalize">Lightblue</span>
+                                    </div>
+                                    <div id="armBox" class="flex p-2 yellow text-white">
+                                        <p class="mr-2">Arms:</p>
+                                        <span id="armTag" class="capitalize">Yellow</span>
+                                    </div>
+                                </div>
+                                <div class="mr-2">
+                                    <div id="panelBox" class="flex p-2 lightblue text-white mb-2">
+                                        <p class="mr-2">Panel:</p>
+                                        <span id="panelTag" class="capitalize">Lightblue</span>
+                                    </div>
+                                    <div id="hemBox" class="flex p-2 lightblue text-white">
+                                        <p class="mr-2">Hem:</p>
+                                        <span id="bodyTag" class="capitalize">Lightblue</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <div id="armBox" class="flex p-2 bg-blue-700 text-white mb-2">
-                                        <p class="mr-2">Arms:</p>
-                                        <span id="armTag" class="capitalize">Blue</span>
+                                    <div id="skirtBox" class="flex p-2 orange text-white mb-2">
+                                        <p class="mr-2">Skirt:</p>
+                                        <span id="skirtTag" class="capitalize">Orange</span>
                                     </div>
-                                    <div id="hemBox" class="flex p-2 bg-red-700 text-white mb-2">
+                                    <div id="cuffBox" class="flex p-2 orange text-white">
                                         <p class="mr-2">Hem:</p>
-                                        <span id="hemTag" class="capitalize">Red</span>
+                                        <span id="cuffTag" class="capitalize">Orange</span>
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +120,7 @@
                         <div class="flex border-t border-gray-300 py-2">
                             <span class="text-gray-500">Size</span>
                             <div class="size btn_grid ml-auto">
-                                <select name="" id="" class="px-2 py-1 border-solid border-2 border-gray-300">
+                                <select name="ageSelect" id="ageSelect" class="px-2 py-1 border-solid border-2 border-gray-300">
                                     <option value="2-3">2-3 Years</option>
                                     <option value="4-5">4-5 Years</option>
                                     <option value="6-7">6-7 Years</option>
@@ -116,7 +132,7 @@
                         <div class="flex border-t border-b mb-6 border-gray-300 py-2">
                             <span class="text-gray-500">Quantity</span>
                             <div class="size btn_grid ml-auto">
-                                <select name="qty" id="" class="px-2 py-1 border-solid border-2 border-gray-300">
+                                <select name="qty" id="prodQuantity" class="px-2 py-1 border-solid border-2 border-gray-300">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -130,17 +146,49 @@
                         <button id="bodyAccordion" class="accordion w-full py-4 border-b-4 border-yellow-700 text-left outline-none text-gray-600">Body</button>
                         <div class="panel">
                             <div class="px-4 py-4 flex items-center">
-                                <button data-name="red" onclick="changeColour('red','body')" class="bg-red-700 w-8 h-8 mr-4 body-button rounded-full relative"></button>
-                                <button data-name="lightblue" onclick="changeColour('lightblue','body')" class="bg-blue-700 w-8 h-8 mr-4 body-button rounded-full relative"></button>
-                                <button data-name="yellow" onclick="changeColour('yellow','body')" class="bg-yellow-700 w-8 h-8 mr-4 body-button rounded-full relative selected"></button>
+                                <button data-name="orange" onclick="changeColour('orange','body')" class="orange w-8 h-8 mr-4 body-button rounded-full relative"></button>
+                                <button data-name="lightblue" onclick="changeColour('lightblue','body')" class="lightblue w-8 h-8 mr-4 body-button rounded-full relative"></button>
+                                <button data-name="yellow" onclick="changeColour('yellow','body')" class="yellow w-8 h-8 mr-4 body-button rounded-full relative selected"></button>
+                                <button data-name="blue" onclick="changeColour('blue','body')" class="blue w-8 h-8 mr-4 body-button rounded-full relative"></button>
+                                <button data-name="grey" onclick="changeColour('grey','body')" class="grey w-8 h-8 mr-4 body-button rounded-full relative"></button>
+                                <button data-name="green" onclick="changeColour('green','body')" class="green w-8 h-8 mr-4 body-button rounded-full relative"></button>
+                                <button data-name="pink" onclick="changeColour('pink','body')" class="pink w-8 h-8 mr-4 body-button rounded-full relative"></button>
                             </div>
                         </div>
                         <button id="armAccordion" class="accordion w-full py-4 border-b-4 border-blue-700 text-left outline-none text-gray-600">Arms</button>
                         <div class="panel">
                             <div class="px-4 py-4 flex items-center">
-                                <button data-name="red" onclick="changeColour('red','arm')" class="bg-red-700 w-8 h-8 mr-4 arm-button rounded-full relative"></button>
-                                <button data-name="lightblue" onclick="changeColour('lightblue','arm')" class="bg-blue-700 w-8 h-8 mr-4 arm-button rounded-full relative selected"></button>
-                                <button data-name="yellow" onclick="changeColour('yellow','arm')" class="bg-yellow-700 w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                                <button data-name="orange" onclick="changeColour('orange','arm')" class="orange w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                                <button data-name="lightblue" onclick="changeColour('lightblue','arm')" class="lightblue w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                                <button data-name="yellow" onclick="changeColour('yellow','arm')" class="yellow w-8 h-8 mr-4 arm-button rounded-full relative selected"></button>
+                                <button data-name="blue" onclick="changeColour('blue','arm')" class="blue w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                                <button data-name="grey" onclick="changeColour('grey','arm')" class="grey w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                                <button data-name="green" onclick="changeColour('green','arm')" class="green w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                                <button data-name="pink" onclick="changeColour('pink','arm')" class="pink w-8 h-8 mr-4 arm-button rounded-full relative"></button>
+                            </div>
+                        </div>
+                        <button id="panelAccordion" class="accordion w-full py-4 border-b-4 border-red-700 text-left outline-none text-gray-600">Arm Panels</button>
+                        <div class="panel">
+                            <div class="px-4 py-4 flex items-center">
+                                <button data-name="orange" onclick="changeColour('orange','panel')" class="orange w-8 h-8 mr-4 panel-button rounded-full relative"></button>
+                                <button data-name="lightblue" onclick="changeColour('lightblue','panel')" class="lightblue w-8 h-8 mr-4 panel-button rounded-full relative"></button>
+                                <button data-name="yellow" onclick="changeColour('yellow','panel')" class="yellow w-8 h-8 mr-4 panel-button rounded-full relative selected"></button>
+                                <button data-name="blue" onclick="changeColour('blue','panel')" class="blue w-8 h-8 mr-4 panel-button rounded-full relative"></button>
+                                <button data-name="grey" onclick="changeColour('grey','panel')" class="grey w-8 h-8 mr-4 panel-button rounded-full relative"></button>
+                                <button data-name="green" onclick="changeColour('green','panel')" class="green w-8 h-8 mr-4 panel-button rounded-full relative"></button>
+                                <button data-name="pink" onclick="changeColour('pink','panel')" class="pink w-8 h-8 mr-4 panel-button rounded-full relative"></button>
+                            </div>
+                        </div>
+                        <button id="cuffAccordion" class="accordion w-full py-4 border-b-4 border-red-700 text-left outline-none text-gray-600">Cuff</button>
+                        <div class="panel">
+                            <div class="px-4 py-4 flex items-center">
+                                <button data-name="orange" onclick="changeColour('orange','cuff')" class="orange w-8 h-8 mr-4 cuff-button rounded-full relative"></button>
+                                <button data-name="lightblue" onclick="changeColour('lightblue','cuff')" class="lightblue w-8 h-8 mr-4 cuff-button rounded-full relative"></button>
+                                <button data-name="yellow" onclick="changeColour('yellow','cuff')" class="yellow w-8 h-8 mr-4 cuff-button rounded-full relative selected"></button>
+                                <button data-name="blue" onclick="changeColour('blue','cuff')" class="blue w-8 h-8 mr-4 cuff-button rounded-full relative"></button>
+                                <button data-name="grey" onclick="changeColour('grey','cuff')" class="grey w-8 h-8 mr-4 cuff-button rounded-full relative"></button>
+                                <button data-name="green" onclick="changeColour('green','cuff')" class="green w-8 h-8 mr-4 cuff-button rounded-full relative"></button>
+                                <button data-name="pink" onclick="changeColour('pink','cuff')" class="pink w-8 h-8 mr-4 cuff-button rounded-full relative"></button>
                             </div>
                         </div>
                         <button id="collarAccordion" class="accordion w-full py-4 border-b-4 border-red-600 text-left outline-none text-gray-600">Collar</button>
@@ -164,9 +212,25 @@
                         <button id="hemAccordion" class="accordion w-full py-4 border-b-4 border-red-700 text-left outline-none text-gray-600">Hem</button>
                         <div class="panel">
                             <div class="px-4 py-4 flex items-center">
-                                <button data-name="red" onclick="changeColour('red','hem')" class="bg-red-700 w-8 h-8 mr-4 hem-button rounded-full relative selected relative"></button>
-                                <button data-name="lightblue" onclick="changeColour('lightblue','hem')" class="bg-blue-700 w-8 h-8 mr-4 hem-button rounded-full relative"></button>
-                                <button data-name="yellow" onclick="changeColour('yellow','hem')" class="bg-yellow-700 w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                                <button data-name="orange" onclick="changeColour('orange','hem')" class="orange w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                                <button data-name="lightblue" onclick="changeColour('lightblue','hem')" class="lightblue w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                                <button data-name="yellow" onclick="changeColour('yellow','hem')" class="yellow w-8 h-8 mr-4 body-button rounded-full relative selected"></button>
+                                <button data-name="blue" onclick="changeColour('blue','body')" class="blue w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                                <button data-name="grey" onclick="changeColour('grey','hem')" class="grey w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                                <button data-name="green" onclick="changeColour('green','hem')" class="green w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                                <button data-name="pink" onclick="changeColour('pink','hem')" class="pink w-8 h-8 mr-4 hem-button rounded-full relative"></button>
+                            </div>
+                        </div>
+                        <button id="skirtAccordion" class="accordion w-full py-4 border-b-4 border-red-700 text-left outline-none text-gray-600">Skirt</button>
+                        <div class="panel">
+                            <div class="px-4 py-4 flex items-center">
+                                <button data-name="orange" onclick="changeColour('orange','skirt')" class="orange w-8 h-8 mr-4 skirt-button rounded-full relative"></button>
+                                <button data-name="lightblue" onclick="changeColour('lightblue','skirt')" class="lightblue w-8 h-8 mr-4 skirt-button rounded-full relative"></button>
+                                <button data-name="yellow" onclick="changeColour('yellow','skirt')" class="yellow w-8 h-8 mr-4 skirt-button rounded-full relative selected"></button>
+                                <button data-name="blue" onclick="changeColour('blue','skirt')" class="blue w-8 h-8 mr-4 skirt-button rounded-full relative"></button>
+                                <button data-name="grey" onclick="changeColour('grey','skirt')" class="grey w-8 h-8 mr-4 skirt-button rounded-full relative"></button>
+                                <button data-name="green" onclick="changeColour('green','skirt')" class="green w-8 h-8 mr-4 skirt-button rounded-full relative"></button>
+                                <button data-name="pink" onclick="changeColour('pink','skirt')" class="pink w-8 h-8 mr-4 skirt-button rounded-full relative"></button>
                             </div>
                         </div>
                         <!--<div class="options">
@@ -220,7 +284,7 @@
                     </div>
                     <div class="flex">
                         <span class="title-font font-medium text-2xl text-gray-900">£95.00</span>
-                        <button class="flex ml-auto text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Add To Cart</button>
+                        <button class="flex ml-auto text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded" onclick="createInvoice()">Add To Cart</button>
                     </div>
                 </div>
             </div>
