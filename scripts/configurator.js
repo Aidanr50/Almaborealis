@@ -24,11 +24,19 @@ function changeColour(colour, part) {
   }
 
   function changeCollarColour(colour) {
+    let partBox = document.getElementById(`collarBox`);
+    let partTag = document.getElementById(`collarTag`);
+    let accordion = document.getElementById(`collarAccordion`);
     let collarImg = document.getElementById("collar-img").src;
 
     let newSrc = collarImg.replace(/orange|blue|lightblue|grey|green|pink|yellow/g, colour);
 
     document.getElementById("collar-img").src = newSrc;
+    partBox.classList.remove("orange", "yellow", "green", "blue", "lightblue", "pink", "grey");
+    partBox.classList.add(`${colour}`);
+    partTag.innerHTML = colour;
+    accordion.classList.remove("orange-border", "yellow-border", "green-border", "blue-border", "lightblue-border", "pink-border", "grey-border");
+    accordion.classList.add(`${colour}-border`);
   }
   
   // Scroll to top Script
