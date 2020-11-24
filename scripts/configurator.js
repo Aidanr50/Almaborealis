@@ -1,11 +1,9 @@
 // Configurator Scripts
 
 function changeColour(colour, part) {
-    let colour_btn_els = document.querySelectorAll(`.${part}-button`);
     let partBox = document.getElementById(`${part}Box`);
     let partTag = document.getElementById(`${part}Tag`);
     let accordion = document.getElementById(`${part}Accordion`);
-    let styleSelector = document.getElementById(`${part}Style`);
   
     let imagery_el = document.getElementById(`${part}-img`);
     imagery_el.src = `img/config/dress/dress-${part}-${colour}-min.png`;
@@ -16,12 +14,17 @@ function changeColour(colour, part) {
     accordion.classList.add(`${colour}-border`);
   }
   
-  function changeStyle(style, part) {
-    let currentStyle = style.value;
-    let imageSrc = document.getElementById(`${part}-img`).src;
-    
-    imageSrc.replace
-    console.log(imageSrc)
+  function changeStyle() {
+    let collarImg = document.getElementById("collar-img").src;
+    let collarStyle = document.getElementById("collarStyle").value
+
+    let newSrc = collarImg.replace(/frill|regal/g, collarStyle);
+
+    document.getElementById("collar-img").src = newSrc;
+  }
+
+  function changeCollarColour(colour) {
+
   }
   
   // Scroll to top Script
@@ -83,10 +86,22 @@ function changeColour(colour, part) {
     let size = document.getElementById("ageSelect").value;
     let qty = document.getElementById("prodQuantity").value;
     let bodyColour_el = document.getElementById("bodyTag").textContent;
+    let armColour_el = document.getElementById("armTag").textContent;
+    let panelColour_el = document.getElementById("panelTag").textContent;
+    let collarColour_el = document.getElementById("collarTag").textContent;
+    let cuffColour_el = document.getElementById("cuffTag").textContent;
+    let hemColour_el = document.getElementById("hemTag").textContent;
+    let skirtColour_el = document.getElementById("skirtTag").textContent;
 
     localStorage.setItem("sizeVal", size);
     localStorage.setItem("qtyVal", qty);
     localStorage.setItem("bodyColourVal", bodyColour_el);
+    localStorage.setItem("armColourVal", armColour_el);
+    localStorage.setItem("collarColourVal", collarColour_el);
+    localStorage.setItem("panelColourVal", panelColour_el);
+    localStorage.setItem("cuffColourVal", cuffColour_el);
+    localStorage.setItem("hemColourVal", hemColour_el);
+    localStorage.setItem("skirtColourVal", skirtColour_el);
 
     window.location.href = 'invoice.html';
   }

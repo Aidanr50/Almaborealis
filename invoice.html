@@ -44,48 +44,42 @@
           <div class="spacer"></div>
     </section>
 
-    <main class="h-screen">
+    <main>
         <section class="text-gray-700 body-font overflow-hidden">
             <div class="container px-5 py-5 my-12 md:px-0 md:py-24 mx-auto flex">
-                <div class="bg-gray-100 rounded px-5 py-2 mr-8 flex-grow">
-                    <div class="flex">
+                <div class="bg-gray-100 rounded px-8 py-4 mr-8 flex-grow">
+                    <div class="flex flex-col sm:flex-row">
                         <div class="relative h-64 w-64 mr-8">
                             <div class="prod-img w-1/2 flex items-center justify-center">
-                                <!-- <img id="body-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-body-lowres-green.png" alt="" srcset="">
-                                <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-arm-lowres-blue.png" alt="" srcset="">
-                                <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-hem-lowres-red.png" alt="" srcset="">
-                                <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-neck-lowres-red.png" alt="" srcset=""> -->
-                                <img id="body-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-body-yellow.png" alt="" srcset="">
-                                <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-arm-yellow.png" alt="" srcset="">
-                                <img id="panel-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-panel-lightblue.png" alt="" srcset="">
-                                <img id="cuffs-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-cuffs-red.png" alt="" srcset="">
-                                <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-hem-lightblue.png" alt="" srcset="">
-                                <img id="skirt-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-skirt-red.png" alt="" srcset="">
-                                <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-collar-regal-lightblue.png" alt="" srcset="">
+                                <img id="body-img" class="invoice-img absolute top-0 left-0 component" src="img/config/dress/dress-body-yellow-min.png" alt="" srcset="">
+                                <img id="arm-img" class="invoice-img absolute top-0 left-0 component" src="img/config/dress/dress-arm-yellow-min.png" alt="" srcset="">
+                                <img id="panel-img" class="invoice-img absolute top-0 left-0 component" src="img/config/dress/dress-panel-lightblue-min.png" alt="" srcset="">
+                                <img id="cuff-img" class="invoice-img absolute top-0 left-0 component" src="img/config/dress/dress-cuff-orange-min.png" alt="" srcset="">
+                                <img id="hem-img" class="invoice-img absolute top-0 left-0 component" src="img/config/dress/dress-hem-lightblue-min.png" alt="" srcset="">
+                                <img id="skirt-img" class="invoice-img absolute top-0 left-0 component" src="img/config/dress/dress-skirt-orange-min.png" alt="" srcset="">
+                                <img id="collar-img" class="invoice-img absolute top-0 left-0 component" src="img/config/dress/dress-collar-regal-lightblue-min.png" alt="" srcset="">
                             </div>
                         </div>
-                        <div class="mr-8">
+                        <div class="px-8 py-4 mr-8 bg-gray-200">
                             <h1 class="text-3xl mb-8 font-semibold">Your Order</h1>
                             <h3 class="text-xl mb-4">Order Reference: </h3>
                             <p class="mb-2"><span class="font-bold">Product:</span> Do It Yourself Dress</p>
                             <p class="mb-2"><span class="font-bold">Size: </span><span id="invoiceSize"></span></p>
                             <p class="mb-2"><span class="font-bold">Qty: </span></span><span id="invoiceQty"></span></p>
                         </div>
-                        <div>
+                        <div class="px-8 py-4 mr-8 bg-gray-200">
                             <h1 class="text-3xl mb-8 font-semibold">Style</h1>
-                            <p class="mb-2"><span class="font-bold">Body:</span><span id="bodyColourTag"></span></p>
-                            <p class="mb-2"><span class="font-bold">Collar: </span><span id="collarColourTag"></span></p>
-                            <p class="mb-2"><span class="font-bold">Arms: </span></span><span id="armColourTag"></span></p>
-                            <p class="mb-2"><span class="font-bold">Panel:</span><span id="panelColourTag"></span></p>
-                            <p class="mb-2"><span class="font-bold">Hem: </span><span id="hemColourTag"></span></p>
-                            <p class="mb-2"><span class="font-bold">Skirt: </span></span><span id="skirtColourTag"></span></p>
-                            <p class="mb-2"><span class="font-bold">Cuffs: </span></span><span id="cuffColourTag"></span></p>
+                            <div class="">
+                                <p class="mb-2 mr-2"><span class="font-bold">Body: </span><span id="bodyColourTag"></span></p>
+                                <p class="mb-2 mr-2"><span class="font-bold">Collar: </span><span id="collarColourTag"></span></p>
+                                <p class="mb-2 mr-2"><span class="font-bold">Arms: </span></span><span id="armColourTag"></span></p>
+                                <p class="mb-2 mr-2"><span class="font-bold">Panel: </span><span id="panelColourTag"></span></p>
+                                <p class="mb-2 mr-2"><span class="font-bold">Hem: </span><span id="hemColourTag"></span></p>
+                                <p class="mb-2 mr-2"><span class="font-bold">Skirt: </span></span><span id="skirtColourTag"></span></p>
+                                <p class="mb-2 mr-2"><span class="font-bold">Cuffs: </span></span><span id="cuffColourTag"></span></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="bg-gray-100 rounded px-5 py-2">
-                    <h1 class="text-3xl font-semibold">Payment Method</h1>
-                    <h1 id="invoiceHead" class=""></h1>
                 </div>
             </div>
         </section>

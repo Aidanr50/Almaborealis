@@ -9,6 +9,7 @@
     <link rel="icon" href="img/jumper-ico.png">
 </head>
 <body>
+    <button onclick="topFunction()" id="myBtn" class="opacity-0 fixed bg-red-700 text-white cursor-pointer p-4 rounded hover:bg-red-600" title="Go to top">Top</button> 
     <section>
         <header class="h-auto md:h-20 text-gray-700 body-font fixed w-full bg-white border-b-2 border-gray-200 z-40">
             <div class="container mx-auto flex px-5 py-2 md:p-5 flex-row items-center justify-between">
@@ -49,10 +50,6 @@
             <div class="container px-5 py-5 md:px-0 md:py-24 mx-auto">
                 <div class="flex flex-wrap">
                 <div class="prod-img w-1/2 relative flex items-center justify-center">
-                        <!-- <img id="body-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-body-lowres-green.png" alt="" srcset="">
-                        <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-arm-lowres-blue.png" alt="" srcset="">
-                        <img id="hem-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-hem-lowres-red.png" alt="" srcset="">
-                        <img id="collar-img" class="absolute top-0 left-0 component" src="img/config/jumper/jumper-neck-lowres-red.png" alt="" srcset=""> -->
                         <img id="body-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-body-yellow-min.png" alt="" srcset="">
                         <img id="arm-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-arm-yellow-min.png" alt="" srcset="">
                         <img id="panel-img" class="absolute top-0 left-0 component" src="img/config/dress/dress-panel-lightblue-min.png" alt="" srcset="">
@@ -81,7 +78,7 @@
                             <div class="ml-auto flex flex-wrap">
                                 <div class="mr-2 mb-2 w-full sm:w-auto">
                                     <div id="bodyBox" class="flex p-2 yellow text-white h-full items-center justify-center sm:justify-start">
-                                        <p class="mr-2">Collar:</p>
+                                        <p class="mr-2">Body:</p>
                                         <span id="bodyTag" class="capitalize">Yellow</span>
                                     </div>
                                 </div>
@@ -196,15 +193,19 @@
                             <div class="flex px-4 py-4">
                                 <div class="flex">
                                     <div class="mr-8">  
-                                        <select name="collarStyle" id="collarStyle" class="border px-2 py-1" onchange="changeColour(colour, part)">
+                                        <select name="collarStyle" id="collarStyle" class="border px-2 py-1" onchange="changeStyle()">
                                             <option value="regal">Regal</option>
-                                            <option value="frilly">Frilly</option>
+                                            <option value="frill">Frilly</option>
                                         </select>
                                     </div>
-                                    <div>
-                                        <button data-name="red" onclick="changeColour('red','collar')" class="bg-red-700 w-8 h-8 mr-4 collar-button rounded-full relative selected"></button>
-                                        <button data-name="lightblue" onclick="changeColour('lightblue','collar')" class="bg-blue-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
-                                        <button data-name="yellow" onclick="changeColour('yellow','collar')" class="bg-yellow-700 w-8 h-8 mr-4 collar-button rounded-full relative"></button>
+                                    <div class="flex">
+                                        <button data-name="orange" onclick="changeCollarColour('orange','skirt')" class="orange w-8 h-8 mr-4 mb-2 skirt-button rounded-full relative"></button>
+                                        <button data-name="lightblue" onclick="changeCollarColour('lightblue','skirt')" class="lightblue w-8 h-8 mr-4 mb-2 skirt-button rounded-full relative"></button>
+                                        <button data-name="yellow" onclick="changeCollarColour('yellow','skirt')" class="yellow w-8 h-8 mr-4 mb-2 skirt-button rounded-full relative selected"></button>
+                                        <button data-name="blue" onclick="changeCollarColour('blue','skirt')" class="blue w-8 h-8 mr-4 mb-2 skirt-button rounded-full relative"></button>
+                                        <button data-name="grey" onclick="changeCollarColour('grey','skirt')" class="grey w-8 h-8 mr-4 mb-2 skirt-button rounded-full relative"></button>
+                                        <button data-name="green" onclick="changeCollarColour('green','skirt')" class="green w-8 h-8 mr-4 mb-2 skirt-button rounded-full relative"></button>
+                                        <button data-name="pink" onclick="changeCollarColour('pink','skirt')" class="pink w-8 h-8 mr-4 mb-2 skirt-button rounded-full relative"></button>
                                     </div>
                                 </div>
                             </div>
