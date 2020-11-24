@@ -8,12 +8,12 @@ function changeColour(colour, part) {
     let styleSelector = document.getElementById(`${part}Style`);
   
     let imagery_el = document.getElementById(`${part}-img`);
-    imagery_el.src = `img/config/dress/dress-${part}-${colour}.png`;
-    partBox.classList.remove("bg-red-700", "bg-yellow-700", "bg-blue-700");
-    partBox.classList.add(`bg-${colour}-700`);
+    imagery_el.src = `img/config/dress/dress-${part}-${colour}-min.png`;
+    partBox.classList.remove("orange", "yellow", "green", "blue", "lightblue", "pink", "grey");
+    partBox.classList.add(`${colour}`);
     partTag.innerHTML = colour;
-    accordion.classList.remove("border-red-700", "border-yellow-700", "border-blue-700");
-    accordion.classList.add(`border-${colour}-700`);
+    accordion.classList.remove("orange-border", "yellow-border", "green-border", "blue-border", "lightblue-border", "pink-border", "grey-border");
+    accordion.classList.add(`${colour}-border`);
   }
   
   function changeStyle(style, part) {
@@ -86,7 +86,7 @@ function changeColour(colour, part) {
 
     localStorage.setItem("sizeVal", size);
     localStorage.setItem("qtyVal", qty);
-    localStorage.setItem("bodyColour", bodyColour_el);
+    localStorage.setItem("bodyColourVal", bodyColour_el);
 
     window.location.href = 'invoice.html';
   }
