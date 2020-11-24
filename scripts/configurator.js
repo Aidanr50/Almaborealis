@@ -24,7 +24,11 @@ function changeColour(colour, part) {
   }
 
   function changeCollarColour(colour) {
+    let collarImg = document.getElementById("collar-img").src;
 
+    let newSrc = collarImg.replace(/orange|blue|lightblue|grey|green|pink|yellow/g, colour);
+
+    document.getElementById("collar-img").src = newSrc;
   }
   
   // Scroll to top Script
