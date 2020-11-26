@@ -34,7 +34,7 @@ window.onload = function() {
 
     bodyImg.src = `img/config/dress/dress-body-${localStorage.getItem("bodyColourVal")}-min.png`;
     armImg.src = `img/config/dress/dress-arm-${localStorage.getItem("armColourVal")}-min.png`;
-    collarImg.src = `img/config/dress/dress-collar-regal-${localStorage.getItem("collarColourVal")}-min.png`;
+    collarImg.src = `img/config/dress/dress-collar-frill-${localStorage.getItem("collarColourVal")}-min.png`;
     panelImg.src = `img/config/dress/dress-panel-${localStorage.getItem("panelColourVal")}-min.png`;
     cuffImg.src = `img/config/dress/dress-cuff-${localStorage.getItem("cuffColourVal")}-min.png`;
     hemImg.src = `img/config/dress/dress-hem-${localStorage.getItem("hemColourVal")}-min.png`;

@@ -101,6 +101,7 @@ function changeColour(colour, part) {
     let armColour_el = document.getElementById("armTag").textContent;
     let panelColour_el = document.getElementById("panelTag").textContent;
     let collarColour_el = document.getElementById("collarTag").textContent;
+    // let collarStyle_el = document.getElementById("collarstyle").value;
     let cuffColour_el = document.getElementById("cuffTag").textContent;
     let hemColour_el = document.getElementById("hemTag").textContent;
     let skirtColour_el = document.getElementById("skirtTag").textContent;
@@ -110,6 +111,7 @@ function changeColour(colour, part) {
     localStorage.setItem("bodyColourVal", bodyColour_el);
     localStorage.setItem("armColourVal", armColour_el);
     localStorage.setItem("collarColourVal", collarColour_el);
+    // localStorage.setItem("collarStyleVal", collarStyle_el);
     localStorage.setItem("panelColourVal", panelColour_el);
     localStorage.setItem("cuffColourVal", cuffColour_el);
     localStorage.setItem("hemColourVal", hemColour_el);
